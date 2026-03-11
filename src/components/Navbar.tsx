@@ -13,11 +13,26 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollTo = (href: string) => {
     setOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/" + href);
+      return;
+    }
     const el = document.querySelector(href);
     el?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleNav = (link: { href: string; isPage?: boolean }) => {
+    setOpen(false);
+    if (link.isPage) {
+      navigate(link.href);
+    } else {
+      scrollTo(link.href);
+    }
   };
 
   return (
