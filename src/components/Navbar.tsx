@@ -1,28 +1,44 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Serviços", href: "#servicos" },
-  { label: "Cases", href: "#cases" },
+  { label: "Cases", href: "/cases", isPage: true },
   { label: "Sobre", href: "#sobre" },
   { label: "Contato", href: "#contato" },
 ];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollTo = (href: string) => {
     setOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/" + href);
+      return;
+    }
     const el = document.querySelector(href);
     el?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleNav = (link: { href: string; isPage?: boolean }) => {
+    setOpen(false);
+    if (link.isPage) {
+      navigate(link.href);
+    } else {
+      scrollTo(link.href);
+    }
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#home" onClick={() => scrollTo("#home")} className="text-2xl font-display font-bold text-gradient">
+        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="text-2xl font-display font-bold text-gradient">
           Fly Tech
         </a>
 
@@ -31,7 +47,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <button
               key={link.href}
-              onClick={() => scrollTo(link.href)}
+              onClick={() => handleNav(link)}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               {link.label}
