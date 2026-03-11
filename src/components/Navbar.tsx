@@ -38,7 +38,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="#home" onClick={() => scrollTo("#home")} className="text-2xl font-display font-bold text-gradient">
+        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="text-2xl font-display font-bold text-gradient">
           Fly Tech
         </a>
 
