@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import logoFlytech from "@/assets/logo-flytech.png";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Soluções", href: "#servicos" },
@@ -38,8 +38,9 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass">
       <div className="container mx-auto flex items-center justify-between py-4 px-4">
-        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="text-2xl font-display font-bold text-gradient">
-          Fly Tech
+        <a href="/" onClick={(e) => { e.preventDefault(); navigate("/"); }} className="flex items-center gap-2">
+          <img src={logoFlytech} alt="Fly Tech" className="h-10 w-auto" />
+          <span className="text-2xl font-display font-bold text-gradient">Fly Tech</span>
         </a>
 
         {/* Desktop */}

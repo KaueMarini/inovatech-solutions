@@ -4,8 +4,8 @@ import { Crosshair, Diamond, Compass } from "lucide-react";
 const values = [
   {
     icon: Crosshair,
-    title: "Pragmatismo",
-    text: "Cada decisão técnica serve a um objetivo de negócio. Sem vaidade tecnológica, apenas resultado.",
+    title: "Visão Estratégica",
+    text: "Enxergamos além da tecnologia. Cada projeto é uma peça no tabuleiro de crescimento do seu negócio.",
   },
   {
     icon: Diamond,
