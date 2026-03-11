@@ -113,6 +113,22 @@ const CasesSection = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <Link
+            to="/cases"
+            className="inline-flex items-center gap-2 text-primary hover:underline font-medium transition-colors"
+          >
+            Ver todos os cases em detalhes
+            <ArrowRight size={18} />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
