@@ -66,10 +66,12 @@ const ContactSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Vamos <span className="text-gradient">Conversar?</span>
+            Sua operação atual aguenta o{" "}
+            <span className="text-gradient">próximo nível?</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Conte-nos sobre o seu projeto. Nossa equipe responde em até 24 horas.
+            Se a resposta não foi imediata, é hora de conversar. Nossa equipe
+            desenha a arquitetura que falta entre onde você está e onde deveria estar.
           </p>
         </motion.div>
 
@@ -83,9 +85,10 @@ const ContactSection = () => {
             {sent ? (
               <div className="glass rounded-xl p-8 text-center flex flex-col items-center gap-4">
                 <CheckCircle size={48} className="text-primary" />
-                <h3 className="text-2xl font-bold">Mensagem Enviada!</h3>
+                <h3 className="text-2xl font-bold">Mensagem Recebida.</h3>
                 <p className="text-muted-foreground">
-                  Obrigado pelo contato. Retornaremos em breve!
+                  Nossa equipe vai analisar sua operação e retornar com um
+                  diagnóstico inicial em até 24 horas.
                 </p>
                 <Button variant="outline" onClick={() => setSent(false)} className="mt-4">
                   Enviar outra mensagem
@@ -115,9 +118,9 @@ const ContactSection = () => {
                   />
                 </div>
                 <div>
-                  <label className="text-sm font-medium mb-2 block">Mensagem</label>
+                  <label className="text-sm font-medium mb-2 block">Sobre sua operação</label>
                   <Textarea
-                    placeholder="Conte-nos sobre o seu projeto..."
+                    placeholder="Descreva brevemente seus desafios operacionais..."
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     className="bg-background/50 border-border/50 focus:border-primary min-h-[120px]"
@@ -129,7 +132,7 @@ const ContactSection = () => {
                   disabled={loading}
                   className="w-full bg-gradient-cyan text-primary-foreground hover:opacity-90 shadow-cyan"
                 >
-                  {loading ? "Enviando..." : "Enviar Mensagem"}
+                  {loading ? "Enviando..." : "Solicitar Diagnóstico Operacional"}
                   <Send size={16} />
                 </Button>
               </form>

@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Serviços", href: "#servicos" },
+  { label: "Soluções", href: "#servicos" },
   { label: "Cases", href: "/cases", isPage: true },
   { label: "Sobre", href: "#sobre" },
   { label: "Contato", href: "#contato" },
@@ -70,7 +70,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <button
               key={link.href}
-              onClick={() => scrollTo(link.href)}
+              onClick={() => handleNav(link)}
               className="block w-full text-left py-3 text-muted-foreground hover:text-primary transition-colors"
             >
               {link.label}

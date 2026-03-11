@@ -1,30 +1,34 @@
 import { motion } from "framer-motion";
-import { Bot, Cog, Code2, BarChart3 } from "lucide-react";
+import { MessageSquare, Workflow, Layers, LineChart } from "lucide-react";
 
 const services = [
   {
-    icon: Bot,
-    title: "Automação com IA",
+    icon: MessageSquare,
+    title: "Sistemas Autônomos de Relacionamento",
+    subtitle: "Atendimento que nunca para",
     description:
-      "Chatbots inteligentes, assistentes virtuais e automação de processos com inteligência artificial. Elimine trabalho manual e aumente a produtividade.",
+      "Projetamos estruturas de comunicação que operam de forma autônoma e inteligente, criando experiências de relacionamento contínuas com seus clientes, sem depender de intervenção humana.",
   },
   {
-    icon: Cog,
-    title: "Otimização de Processos",
+    icon: Workflow,
+    title: "Orquestração Operacional",
+    subtitle: "Fluidez em cada processo",
     description:
-      "RPA e automação de fluxos operacionais. Reduza erros, ganhe velocidade e libere sua equipe para tarefas estratégicas.",
+      "Mapeamos e redesenhamos os fluxos internos da sua empresa, eliminando gargalos manuais e construindo uma operação com fluidez, previsibilidade e zero desperdício.",
   },
   {
-    icon: Code2,
-    title: "Software & Sites",
+    icon: Layers,
+    title: "Plataformas & Ecossistemas Web",
+    subtitle: "Ativos digitais sob medida",
     description:
-      "Desenvolvimento de sistemas web, aplicativos e sites sob medida. Do MVP ao sistema enterprise, com as melhores tecnologias do mercado.",
+      "Desenvolvemos plataformas de alta performance, sistemas sob medida e ecossistemas web completos. Do MVP ao sistema enterprise, cada linha de código é um ativo estratégico.",
   },
   {
-    icon: BarChart3,
-    title: "Análise de Dados & ML",
+    icon: LineChart,
+    title: "Arquitetura de Dados & Inteligência",
+    subtitle: "Decisões baseadas em evidências",
     description:
-      "Machine Learning, dashboards inteligentes e análise preditiva. Transforme dados brutos em decisões estratégicas para o seu negócio.",
+      "Transformamos dados brutos em inteligência de negócios acionável. Dashboards estratégicos, modelos preditivos e análises que orientam decisões com precisão cirúrgica.",
   },
 ];
 
@@ -40,10 +44,12 @@ const ServicesSection = () => {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            Soluções <span className="text-gradient">Inteligentes</span> para Desafios Reais
+            Engrenagens Digitais para{" "}
+            <span className="text-gradient">Resultados Reais</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Combinamos tecnologia de ponta com expertise de mercado para entregar resultados mensuráveis.
+            Cada solução é desenhada como uma peça estratégica do seu
+            ecossistema. Nenhum esforço genérico. Apenas arquitetura com propósito.
           </p>
         </motion.div>
 
@@ -60,8 +66,13 @@ const ServicesSection = () => {
               <div className="w-12 h-12 rounded-lg bg-gradient-cyan flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <service.icon size={24} className="text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
+              <h3 className="text-xl font-semibold mb-1">{service.title}</h3>
+              <p className="text-xs text-primary font-medium uppercase tracking-wider mb-3">
+                {service.subtitle}
+              </p>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {service.description}
+              </p>
             </motion.div>
           ))}
         </div>
