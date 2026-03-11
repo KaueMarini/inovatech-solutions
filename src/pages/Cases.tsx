@@ -12,13 +12,38 @@ import logoFlyImob from "@/assets/logo-flyimob.png";
 
 const cases = [
   {
+    company: "Fly Imob",
+    logo: logoFlyImob,
+    logoBg: "bg-[#0a0f1a]",
+    icon: Building2,
+    tagline: "SaaS Completo para Imobiliárias e Corretores",
+    challenge:
+      "O mercado imobiliário carecia de uma plataforma unificada que desse ao dono, gerente e corretor ferramentas reais de gestão, captação, CRM e inteligência de mercado, tudo em um só lugar.",
+    solution:
+      "Desenvolvemos, em parceria com um grande investidor de São Paulo, um SaaS completo que maximiza a eficiência do corretor e dá visão estratégica ao gestor. O sistema inclui torre de controle para o dono com ranking de equipes e forecast de vendas, CRM integrado ao WhatsApp com matching inteligente de imóveis, robô de captação que varre portais em busca de oportunidades, gerador de avaliações profissionais em PDF, termômetro de mercado com dados reais por cidade, academia de treinamentos para corretores e módulo de parceiros jurídicos.",
+    highlights: [
+      "Torre de Controle com ranking, faturamento e forecast",
+      "Hierarquia de permissões: Dono, Gerente e Corretor",
+      "Auditoria de Performance baseada nos últimos atendimentos",
+      "Dashboard Financeiro com VGV e pipeline em tempo real",
+      "CRM integrado ao WhatsApp com matching de imóveis",
+      "Agenda de visitas vinculada a imóveis e leads",
+      "Radar de Captação (scraper) para oportunidades FSBO",
+      "Gerador de Avaliação PTAM Express em PDF",
+      "Importador XML e busca avançada com filtros inteligentes",
+      "Termômetro Imob com dados reais de mercado por cidade",
+      "Academia Fly com vídeos e treinamentos integrados",
+      "Módulo de Parceiros Jurídicos e despachantes",
+    ],
+  },
+  {
     company: "Minas Táxi",
     logo: logoMinasTaxis,
     logoBg: "bg-yellow-400",
     icon: Route,
     tagline: "Roteirização Inteligente com IA",
     challenge:
-      "A Minas Táxi precisava otimizar suas rotas de transporte, reduzir custos com combustível e integrar os dados diretamente no sistema de controle dos taxistas — tudo de forma automatizada.",
+      "A Minas Táxi precisava otimizar suas rotas de transporte, reduzir custos com combustível e integrar os dados diretamente no sistema de controle dos taxistas, tudo de forma automatizada.",
     solution:
       "Desenvolvemos um sistema que lê planilhas com diversos usuários, separa automaticamente os passageiros em carros de até 3 pessoas e calcula a melhor rota possível, garantindo o trajeto mais otimizado para cada taxista. A roteirização é feita via API Mapbox, a IA analisa e calcula o consumo de combustível, e os dados são inseridos automaticamente no sistema de controle de rotas integrado aos taxistas.",
     highlights: [
@@ -43,7 +68,7 @@ const cases = [
       "Atendimento 100% automatizado via WhatsApp",
       "IA com RAG para busca em documentos técnicos",
       "Envio automático de PDFs e vídeos de resolução",
-      "Fluxo completo: identificação → solução → validação",
+      "Fluxo completo: identificação, solução e validação",
       "Machine Learning detecta padrões de falhas e alerta engenheiros",
     ],
   },
@@ -88,11 +113,11 @@ const cases = [
     icon: MessageSquare,
     tagline: "Ecossistema de IA para Atendimento Imobiliário",
     challenge:
-      "A Luz Conceito precisava automatizar o atendimento inicial, qualificar leads, agendar visitas e dar controle total ao gestor sobre as conversas — sem perder o toque humano.",
+      "A Luz Conceito precisava automatizar o atendimento inicial, qualificar leads, agendar visitas e dar controle total ao gestor sobre as conversas, sem perder o toque humano.",
     solution:
       "Criamos um fluxo de conversação com IA treinada para entender o perfil do cliente, sugerir imóveis compatíveis e registrar tudo em um CRM dedicado. O dono pode intervir a qualquer momento, bloquear a IA e analisar métricas como orçamento médio, ticket médio, valor em negociação e visitas agendadas automaticamente no Google Calendar dos corretores.",
     highlights: [
-      "IA treinada para matching cliente-imóvel",
+      "IA treinada para matching cliente e imóvel",
       "CRM dedicado com controle total do gestor",
       "Agendamento automático no Google Calendar",
       "Métricas: orçamento, ticket médio, visitas agendadas",
@@ -107,37 +132,12 @@ const cases = [
     challenge:
       "O mercado financeiro precisava de uma ferramenta que eliminasse a fricção de planilhas e apps complexos, permitindo gestão financeira por mensagens de texto, áudio e fotos.",
     solution:
-      "Desenvolvemos um SaaS que roda diretamente no WhatsApp. O usuário envia texto, áudio, foto de nota fiscal ou PDF — a IA interpreta, extrai valores, classifica categorias e salva no banco automaticamente. O sistema envia lembretes proativos de contas a pagar/receber, oferece painel web com gráficos e permite gestão compartilhada entre sócios ou casais via números separados.",
+      "Desenvolvemos um SaaS que roda diretamente no WhatsApp. O usuário envia texto, áudio, foto de nota fiscal ou PDF, e a IA interpreta, extrai valores, classifica categorias e salva no banco automaticamente. O sistema envia lembretes proativos de contas a pagar e receber, oferece painel web com gráficos e permite gestão compartilhada entre sócios ou casais via números separados.",
     highlights: [
       "Input via texto, áudio, foto e PDF no WhatsApp",
       "IA para extração e classificação automática",
-      "Lembretes proativos de contas a pagar/receber",
+      "Lembretes proativos de contas a pagar e receber",
       "Painel web com gráficos e gestão compartilhada",
-    ],
-  },
-  {
-    company: "Fly Imob",
-    logo: logoFlyImob,
-    logoBg: "bg-[#0a0f1a]",
-    icon: Building2,
-    tagline: "SaaS Completo para Imobiliárias e Corretores",
-    challenge:
-      "O mercado imobiliário carecia de uma plataforma unificada que desse ao dono, gerente e corretor ferramentas reais de gestão, captação, CRM e inteligência de mercado — tudo em um só lugar.",
-    solution:
-      "Desenvolvemos, em parceria com um grande investidor de São Paulo, um SaaS completo que maximiza a eficiência do corretor e dá visão estratégica ao gestor. O sistema inclui torre de controle para o dono com ranking de equipes e forecast de vendas, CRM integrado ao WhatsApp com matching inteligente de imóveis, robô de captação que varre portais em busca de oportunidades, gerador de avaliações profissionais em PDF, termômetro de mercado com dados reais por cidade, academia de treinamentos para corretores e módulo de parceiros jurídicos.",
-    highlights: [
-      "Torre de Controle com ranking, faturamento e forecast",
-      "Hierarquia de permissões: Dono → Gerente → Corretor",
-      "Auditoria de Performance baseada nos últimos atendimentos",
-      "Dashboard Financeiro com VGV e pipeline em tempo real",
-      "CRM integrado ao WhatsApp com matching de imóveis",
-      "Agenda de visitas vinculada a imóveis e leads",
-      "Radar de Captação (scraper) para oportunidades FSBO",
-      "Gerador de Avaliação PTAM Express em PDF",
-      "Importador XML e busca avançada com filtros inteligentes",
-      "Termômetro Imob com dados reais de mercado por cidade",
-      "Academia Fly com vídeos e treinamentos integrados",
-      "Módulo de Parceiros Jurídicos e despachantes",
     ],
   },
 ];
