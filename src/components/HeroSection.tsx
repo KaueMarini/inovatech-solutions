@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Trophy } from "lucide-react";
+import { ArrowRight, Trophy } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
@@ -30,21 +30,19 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <Sparkles size={14} />
-            Ecossistemas Inteligentes & RPA
+            Arquitetura Digital & Ecossistemas Inteligentes
           </motion.div>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Transforme seu{" "}
-            <span className="text-gradient">Negócio</span>
+            Construímos{" "}
+            <span className="text-gradient">Ecossistemas</span>
             <br />
-            para o Futuro
+            que Escalam Negócios
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Criamos ecossistemas digitais sob medida que integram tecnologia,
-            dados e processos inteligentes para levar sua empresa a um novo patamar
-            de eficiência e resultados.
+            Transformamos operações complexas em engrenagens digitais de alta
+            performance. Menos atrito, mais lucro, escala sem limite.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -53,7 +51,7 @@ const HeroSection = () => {
               className="bg-gradient-cyan text-primary-foreground hover:opacity-90 text-base px-8 shadow-cyan"
               onClick={() => scrollTo("#contato")}
             >
-              Fale com um Especialista
+              Descubra o Potencial da sua Operação
               <ArrowRight size={18} />
             </Button>
             <Button
