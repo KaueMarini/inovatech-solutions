@@ -163,7 +163,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <h3 className="font-semibold mb-1">Telefone / WhatsApp</h3>
-                <p className="text-muted-foreground">(31) 99999-9999</p>
+                <p className="text-muted-foreground">(13) 99179-3335</p>
               </div>
             </div>
           </motion.div>
