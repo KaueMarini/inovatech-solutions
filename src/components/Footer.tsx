@@ -1,9 +1,14 @@
+import logoFlytech from "@/assets/logo-flytech.png";
+
 const Footer = () => {
   return (
     <footer className="border-t border-border/50 py-10">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="text-xl font-display font-bold text-gradient">Fly Tech</span>
+          <div className="flex items-center gap-2">
+            <img src={logoFlytech} alt="Fly Tech" className="h-8 w-auto" />
+            <span className="text-xl font-display font-bold text-gradient">Fly Tech</span>
+          </div>
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Fly Tech. Todos os direitos reservados.
           </p>
