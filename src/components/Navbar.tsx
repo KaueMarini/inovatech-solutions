@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import logoFlytech from "@/assets/logo-flytech.png";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Soluções", href: "#servicos" },
