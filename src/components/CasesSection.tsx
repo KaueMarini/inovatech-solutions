@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Quote, Star } from "lucide-react";
+import { Quote, Star, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const cases = [
   {
