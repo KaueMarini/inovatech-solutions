@@ -47,7 +47,7 @@ const Navbar = () => {
           {navLinks.map((link) => (
             <button
               key={link.href}
-              onClick={() => scrollTo(link.href)}
+              onClick={() => handleNav(link)}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               {link.label}
