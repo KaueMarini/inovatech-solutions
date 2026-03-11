@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Bot, Route, BarChart3, Globe, MessageSquare, Wallet } from "lucide-react";
+import { ArrowLeft, Bot, Route, BarChart3, Globe, MessageSquare, Wallet, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import logoMinasTaxis from "@/assets/logo-minastaxis.png";
@@ -8,6 +8,7 @@ import logoTalkToal from "@/assets/logo-talktoal.png";
 import logoPrylom from "@/assets/logo-prylom.png";
 import logoLuzConceito from "@/assets/logo-luzconceito.png";
 import logoDataKnow from "@/assets/logo-dataknow.png";
+import logoFlyImob from "@/assets/logo-flyimob.png";
 
 const cases = [
   {
@@ -19,9 +20,10 @@ const cases = [
     challenge:
       "A Minas Táxi precisava otimizar suas rotas de transporte, reduzir custos com combustível e integrar os dados diretamente no sistema de controle dos taxistas — tudo de forma automatizada.",
     solution:
-      "Desenvolvemos um sistema que lê arquivos de demanda, cria roteirizações via API Mapbox, utiliza IA para calcular consumo de combustível e insere automaticamente os dados no sistema de controle de rotas integrado aos taxistas.",
+      "Desenvolvemos um sistema que lê planilhas com diversos usuários, separa automaticamente os passageiros em carros de até 3 pessoas e calcula a melhor rota possível, garantindo o trajeto mais otimizado para cada taxista. A roteirização é feita via API Mapbox, a IA analisa e calcula o consumo de combustível, e os dados são inseridos automaticamente no sistema de controle de rotas integrado aos taxistas.",
     highlights: [
-      "Leitura e processamento automático de arquivos",
+      "Leitura e separação inteligente de passageiros por veículo",
+      "Cálculo da rota mais otimizada para cada taxista",
       "Roteirização inteligente via API Mapbox",
       "Análise de IA para cálculo de combustível",
       "Integração via API com sistema de controle de frotas",
@@ -36,12 +38,13 @@ const cases = [
     challenge:
       "O time de suporte técnico da MP-Agro estava sobrecarregado com chamados repetitivos. Os clientes precisavam de respostas rápidas e precisas sobre problemas em máquinas agrícolas.",
     solution:
-      "Criamos um sistema de suporte via WhatsApp com IA que utiliza arquivos RAG. O cliente envia o chassi da máquina, a IA identifica o problema, busca nos documentos técnicos e envia PDFs e vídeos explicativos. Após o cliente resolver e enviar foto de confirmação, a IA encaminha ao suporte técnico para validação final.",
+      "Criamos um sistema de suporte via WhatsApp com IA que utiliza arquivos RAG. O cliente envia o chassi da máquina, a IA identifica o problema, busca nos documentos técnicos e envia PDFs e vídeos explicativos de como resolver. Após o cliente resolver e enviar foto de confirmação, a IA encaminha ao suporte técnico para validação final. Além disso, desenvolvemos um sistema de Machine Learning que, ao identificar que múltiplas máquinas iguais estão falhando no mesmo local, alerta automaticamente o time de engenheiros para investigação preventiva.",
     highlights: [
       "Atendimento 100% automatizado via WhatsApp",
       "IA com RAG para busca em documentos técnicos",
       "Envio automático de PDFs e vídeos de resolução",
       "Fluxo completo: identificação → solução → validação",
+      "Machine Learning detecta padrões de falhas e alerta engenheiros",
     ],
   },
   {
@@ -112,12 +115,36 @@ const cases = [
       "Painel web com gráficos e gestão compartilhada",
     ],
   },
+  {
+    company: "Fly Imob",
+    logo: logoFlyImob,
+    logoBg: "bg-[#0a0f1a]",
+    icon: Building2,
+    tagline: "SaaS Completo para Imobiliárias e Corretores",
+    challenge:
+      "O mercado imobiliário carecia de uma plataforma unificada que desse ao dono, gerente e corretor ferramentas reais de gestão, captação, CRM e inteligência de mercado — tudo em um só lugar.",
+    solution:
+      "Desenvolvemos, em parceria com um grande investidor de São Paulo, um SaaS completo que maximiza a eficiência do corretor e dá visão estratégica ao gestor. O sistema inclui torre de controle para o dono com ranking de equipes e forecast de vendas, CRM integrado ao WhatsApp com matching inteligente de imóveis, robô de captação que varre portais em busca de oportunidades, gerador de avaliações profissionais em PDF, termômetro de mercado com dados reais por cidade, academia de treinamentos para corretores e módulo de parceiros jurídicos.",
+    highlights: [
+      "Torre de Controle com ranking, faturamento e forecast",
+      "Hierarquia de permissões: Dono → Gerente → Corretor",
+      "Auditoria de Performance baseada nos últimos atendimentos",
+      "Dashboard Financeiro com VGV e pipeline em tempo real",
+      "CRM integrado ao WhatsApp com matching de imóveis",
+      "Agenda de visitas vinculada a imóveis e leads",
+      "Radar de Captação (scraper) para oportunidades FSBO",
+      "Gerador de Avaliação PTAM Express em PDF",
+      "Importador XML e busca avançada com filtros inteligentes",
+      "Termômetro Imob com dados reais de mercado por cidade",
+      "Academia Fly com vídeos e treinamentos integrados",
+      "Módulo de Parceiros Jurídicos e despachantes",
+    ],
+  },
 ];
 
 const Cases = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass">
         <div className="container mx-auto flex items-center justify-between py-4 px-4">
           <Link to="/" className="text-2xl font-display font-bold text-gradient">
@@ -133,7 +160,6 @@ const Cases = () => {
         </div>
       </nav>
 
-      {/* Hero */}
       <section className="pt-32 pb-16 relative">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(var(--primary)/0.08),transparent_60%)]" />
         <div className="container mx-auto px-4 relative z-10 text-center">
@@ -157,7 +183,6 @@ const Cases = () => {
         </div>
       </section>
 
-      {/* Cases */}
       <section className="pb-24">
         <div className="container mx-auto px-4 space-y-20">
           {cases.map((c, i) => {
@@ -175,7 +200,6 @@ const Cases = () => {
               >
                 <div className="glass rounded-2xl overflow-hidden border border-border/50 hover:border-primary/30 transition-colors duration-500">
                   <div className={`grid lg:grid-cols-2 gap-0 ${!isEven ? "lg:[direction:rtl]" : ""}`}>
-                    {/* Visual side */}
                     <div className="relative flex items-center justify-center p-12 lg:p-16 bg-gradient-to-br from-primary/5 to-transparent lg:[direction:ltr]">
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,hsl(var(--primary)/0.06),transparent_70%)]" />
                       <div className="relative z-10 flex flex-col items-center gap-6">
@@ -196,7 +220,6 @@ const Cases = () => {
                       </div>
                     </div>
 
-                    {/* Content side */}
                     <div className="p-8 lg:p-12 flex flex-col justify-center lg:[direction:ltr]">
                       <div className="space-y-6">
                         <div>
@@ -217,7 +240,7 @@ const Cases = () => {
                           <h3 className="text-xs uppercase tracking-widest text-primary font-semibold mb-3">
                             Destaques
                           </h3>
-                          <ul className="grid sm:grid-cols-2 gap-2">
+                          <ul className={`grid ${c.highlights.length > 6 ? "sm:grid-cols-2" : "sm:grid-cols-2"} gap-2`}>
                             {c.highlights.map((h) => (
                               <li
                                 key={h}
@@ -239,7 +262,6 @@ const Cases = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="pb-24">
         <div className="container mx-auto px-4">
           <motion.div
