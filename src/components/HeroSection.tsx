@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, Sparkles, Trophy } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const scrollTo = (href: string) => {
@@ -29,21 +30,21 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <Zap size={14} />
-            Soluções com Inteligência Artificial
+            <Sparkles size={14} />
+            Ecossistemas Inteligentes & RPA
           </motion.div>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Automatize o{" "}
-            <span className="text-gradient">Futuro</span>
+            Transforme seu{" "}
+            <span className="text-gradient">Negócio</span>
             <br />
-            do Seu Negócio
+            para o Futuro
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
-            Transformamos processos complexos em soluções inteligentes.
-            Automação, IA, Machine Learning e desenvolvimento de software
-            sob medida para a sua empresa crescer.
+            Criamos ecossistemas digitais sob medida que integram tecnologia,
+            dados e processos inteligentes para levar sua empresa a um novo patamar
+            de eficiência e resultados.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -64,6 +65,22 @@ const HeroSection = () => {
               Conheça nossas soluções
             </Button>
           </div>
+
+          <motion.div
+            className="mt-12"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.6 }}
+          >
+            <Link
+              to="/cases"
+              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors group"
+            >
+              <Trophy size={16} className="text-primary" />
+              Veja nossos cases de maior sucesso
+              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>
